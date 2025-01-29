@@ -9,7 +9,7 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="min-h-[600px] bg-gradient-to-br from-brand-dark via-brand-primary to-brand-light flex items-center justify-center text-brand-background"
+      className="min-h-screen bg-gradient-to-br from-brand-dark via-brand-primary to-brand-light flex items-center justify-center text-brand-background"
     >
       <div className="container mx-auto px-4 py-20 text-center">
         <motion.h1
@@ -28,15 +28,16 @@ export default function Hero() {
         >
           {hero.subtitle}
         </motion.p>
-        <motion.button
+        <motion.a
+          href="#about"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="bg-brand-accent text-brand-primary px-8 py-3 rounded-full font-semibold
-            hover:bg-brand-accent/90 transition-all duration-200"
+          className="px-8 py-3 rounded-full font-semibold transition-all duration-200
+                     bg-orange-500 text-white hover:bg-orange-600 dark:bg-[rgb(0,255,255)] dark:text-black dark:hover:bg-[rgb(0,200,200)]"
         >
           {hero.cta}
-        </motion.button>
+        </motion.a>
       </div>
     </motion.div>
   );
