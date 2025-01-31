@@ -128,19 +128,19 @@ export default function About() {
           
         </div>
           {/* How We Can Help Section */}
-        <div className="max-w-7xl mx-auto mt-20">
+        <div className="max-w-7xl mx-auto mt-24">
           <motion.h1
             variants={itemVariants}
             className="text-[2.5rem] font-bold mt-13 mb-6 text-brand-primary"
           >
-            {about.title[3]}
+            How We Can Help
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="text-[1rem] text-brand-text mb-6 font-normal leading-relaxed"
           >
-            {about.paragraphs[6] || "Add a paragraph here."}
+            {about.paragraphs[13] || "Add a paragraph here."}
           </motion.p>
 
           {/* Additional Subheadings and Paragraphs */}
