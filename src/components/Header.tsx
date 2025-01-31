@@ -1,37 +1,45 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Briefcase, DollarSign, BarChart, HardHat, Heart, Phone, Users, Factory, Code, Truck, Video, Megaphone, Wrench, Globe, FileText, Layers, Shield, Monitor, Database, Settings, ClipboardList } from "lucide-react";
+import {
+  Menu, X, ChevronDown, Briefcase, DollarSign, BarChart, HardHat, Heart, Phone,
+  Users, Factory, Code, Truck, Video, Megaphone, Wrench, Globe, FileText,
+  Layers, Shield, Monitor, Database, Settings, ClipboardList
+} from "lucide-react";
 import { ThemeToggle } from "./ui/theme-toggle";
 import { siteContent } from "@/config/content";
 
-const industryIcons = [
-  Briefcase, DollarSign, BarChart, HardHat, Heart, Phone, Users, Factory, Code, Truck, Video, Megaphone
-];
-
-const servicesIcons = [
-  Wrench, Globe, FileText, Layers, Shield, Monitor, Database, Settings, ClipboardList
-];
+const industryIcons = [Briefcase, DollarSign, BarChart, HardHat, Heart, Phone, Users, Factory, Code, Truck, Video, Megaphone];
+const servicesIcons = [Wrench, Globe, FileText, Layers, Shield, Monitor, Database, Settings, ClipboardList];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isIndustryDropdownOpen, setIsIndustryDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
+  // Function to handle smooth scrolling
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md transition-colors duration-300">
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between h-16 px-8 lg:px-20">
-        {/* Logo aligned left */}
-        <Link to="/" className="flex items-center" onClick={() => window.location.reload()}>
+        
+        {/* Logo */}
+        <button onClick={() => scrollToSection("home")} className="flex items-center">
           <span className="text-5xl font-semibold text-brand-background dark:text-white hover:text-brand-accent transition-colors cursor-pointer">
             {siteContent.siteInfo.name}
           </span>
-        </Link>
+        </button>
 
-        {/* Desktop Navigation aligned right */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 ml-auto">
           {siteContent.navigation.links.map((link, index) => {
             if (index === 2) {
-              // Services as a dropdown
+              // Services Dropdown
               return (
                 <div 
                   key={index}
@@ -52,10 +60,14 @@ export default function Header() {
                       {siteContent.services.map((service, idx) => {
                         const Icon = servicesIcons[idx % servicesIcons.length];
                         return (
-                          <div key={idx} className="flex items-center space-x-3 text-sm py-2">
+                          <button
+                            key={idx}
+                            className="flex items-center space-x-3 text-sm py-2"
+                            onClick={() => scrollToSection(service.toLowerCase().replace(/\s+/g, "-"))}
+                          >
                             <Icon className="text-orange-500 dark:text-[rgb(0,255,255)]" size={20} />
                             <span className="text-gray-900 dark:text-white">{service}</span>
-                          </div>
+                          </button>
                         );
                       })}
                     </div>
@@ -63,7 +75,7 @@ export default function Header() {
                 </div>
               );
             } else if (index === 3) {
-              // Industry Serving as a dropdown
+              // Industry Dropdown
               return (
                 <div 
                   key={index}
@@ -84,10 +96,14 @@ export default function Header() {
                       {siteContent.industryServing.map((industry, idx) => {
                         const Icon = industryIcons[idx % industryIcons.length];
                         return (
-                          <div key={idx} className="flex items-center space-x-3 text-sm py-2">
+                          <button
+                            key={idx}
+                            className="flex items-center space-x-3 text-sm py-2"
+                            onClick={() => scrollToSection(industry.toLowerCase().replace(/\s+/g, "-"))}
+                          >
                             <Icon className="text-orange-500 dark:text-[#0ff]" size={20} />
                             <span className="text-gray-900 dark:text-white">{industry}</span>
-                          </div>
+                          </button>
                         );
                       })}
                     </div>
@@ -96,13 +112,13 @@ export default function Header() {
               );
             }
             return (
-              <Link
+              <button
                 key={index}
-                to={link.href}
+                onClick={() => scrollToSection(link.href.replace("#", ""))}
                 className="text-md text-brand-background dark:text-white hover:text-brand-accent transition-colors px-4 py-2 border-b-2 border-transparent hover:border-brand-accent hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 {link.label}
-              </Link>
+              </button>
             );
           })}
           <ThemeToggle />
