@@ -93,9 +93,7 @@ export const siteContent = {
     cta: "Learn More",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000",
   },
-  services: {
-    title: [
-      "Lead Nurturing",
+  services: ["Lead Nurturing",
       "Demand Generation",
       "Account-Based Marketing (ABM)",
       "Email Marketing",
@@ -107,22 +105,104 @@ export const siteContent = {
       "List Building",
       "Data Append",
       "Contact Discovery",
+  //   {
+  //     "title": "Services",
+  //     "description": "We help businesses connect with the right decision-makers through targeted, high-quality lead generation campaigns. By leveraging data-driven strategies, we identify potential clients who align with your goals, fueling your sales pipeline and driving growth.",
+  //     "call_to_action": "Ready to expand your reach? Let us deliver leads that convert into opportunities!"
+  //   },
+  //   {
+  //     "title": "Lead Nurturing",
+  //     "description": "Turn prospects into loyal customers with our personalized lead nurturing strategies. We create customized campaigns to engage, educate, and guide your leads through the sales funnel, ensuring maximum conversion potential.",
+  //     "call_to_action": "Start building meaningful relationships with your leads today—partner with us!"
+  //   },
+  //   {
+  //     "title": "Demand Generation",
+  //     "description": "Boost brand awareness and drive interest in your products or services with our innovative demand generation campaigns. We design and execute strategies that position your business as a market leader.",
+  //     "call_to_action": "Generate demand and create lasting impressions—contact us now!"
+  //   },
+  //   {
+  //     "title": "Account-Based Marketing (ABM)",
+  //     "description": "Focus on the accounts that matter most with our ABM strategies. We help you engage key decision-makers with tailored campaigns designed to build relationships and drive results.",
+  //     "call_to_action": "Target smarter with ABM—schedule a consultation today!"
+  //   },
+  //   {
+  //     "title": "Email Marketing",
+  //     "description": "Deliver your message directly to your audience with our expertly crafted email marketing campaigns. From eye-catching designs to persuasive content, we ensure your emails drive engagement and results.",
+  //     "call_to_action": "Make every email count—let’s create your next winning campaign!"
+  //   },
+  //   {
+  //     "title": "Appointment Generation",
+  //     "description": "Save time and effort by letting us secure high-quality appointments with potential clients. Our services help you connect directly with decision-makers who are ready to talk business.",
+  //     "call_to_action": "Let us book your next big opportunity—start now!"
+  //   },
+  //   {
+  //     "title": "Sales Qualified Leads (SQL)",
+  //     "description": "Focus on leads that are ready to buy with our SQL services. We deliver highly qualified prospects, giving your sales team a head start in closing deals efficiently.",
+  //     "call_to_action": "Empower your sales team with SQLs that deliver results—contact us today!"
+  //   },
+  //   {
+  //     "title": "BANT Qualified Leads",
+  //     "description": "Discover leads that meet your budget, authority, need, and timeline criteria. Our BANT-qualified leads are carefully vetted to ensure they align perfectly with your business goals.",
+  //     "call_to_action": "Get leads that are ready to act—reach out to us for BANT-qualified leads!"
+  //   },
+  //   {
+  //     "title": "Marketing Qualified Leads (MQL)",
+  //     "description": "Fuel your marketing campaigns with MQLs that are primed for engagement. Our services help you identify and nurture prospects who show strong interest in your offerings.",
+  //     "call_to_action": "Build a stronger marketing pipeline—partner with us for MQLs!"
+  //   },
+  //   {
+  //     "title": "Event Registration",
+  //     "description": "Drive attendance for your webinars, conferences, or trade shows with our event registration services. We use targeted outreach to maximize your audience and event impact.",
+  //     "call_to_action": "Boost your event participation—let’s fill your seats today!"
+  //   },
+  //   {
+  //     "title": "List Building",
+  //     "description": "Unlock the power of a well-curated contact list with our list-building services. We create targeted, accurate, and segmented contact lists tailored to your business needs, ensuring you connect with the right audience to drive your sales and marketing campaigns.",
+  //     "call_to_action": "Build your perfect contact list today—reach out to us for tailored solutions!"
+  //   },
+  //   {
+  //     "title": "Data Append",
+  //     "description": "Keep your databases fresh and complete with our data append services. We enhance your existing data by adding missing information, such as email addresses, phone numbers, and job titles, ensuring your outreach efforts are accurate and effective.",
+  //     "call_to_action": "Upgrade your database with precision—partner with us for data appending!"
+  //   },
+  //   {
+  //     "title": "Contact Discovery",
+  //     "description": "Find the right decision-makers with our contact discovery services. We identify and deliver verified contact details of prospects in your target market, empowering you to focus your efforts on high-value connections.",
+  //     "call_to_action": "Discover the contacts that matter—get started with us today!"
+  //   }
+  ],
+    // title: [
+    //   "Lead Nurturing",
+    //   "Demand Generation",
+    //   "Account-Based Marketing (ABM)",
+    //   "Email Marketing",
+    //   "Appointment Generation",
+    //   "Sales Qualifies Leads (SQL)",
+    //   "BANT Qualified Leads",
+    //   "Marketing Qualified Leads (MQL)",
+    //   "Event Registration",
+    //   "List Building",
+    //   "Data Append",
+    //   "Contact Discovery",
 
-    ],
-    paragraphs: [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-    ]
-  },
+    // ],
+    // paragraphs: [
+    //   "We help businesses connect with the right decision-makers through targeted, high-quality lead generation campaigns. By leveraging data-driven strategies, we identify potential clients who align with your goals, fueling your sales pipeline and driving growth.",
+    //   "Call to Action: Ready to expand your reach? Let us deliver leads that convert into opportunities!",
+    //   "Turn prospects into loyal customers with our personalized lead nurturing strategies. We create customized campaigns to engage, educate, and guide your leads through the sales funnel, ensuring maximum conversion potential.",
+    //   "Call to Action: Start building meaningful relationships with your leads today—partner with us!", 
+    //   "Boost brand awareness and drive interest in your products or services with our innovative demand generation campaigns. We design and execute strategies that position your business as a market leader.",
+    //   "Call to Action: Generate demand and create lasting impressions—contact us now!",
+    //   "Focus on the accounts that matter most with our ABM strategies. We help you engage key decision-makers with tailored campaigns designed to build relationships and drive results.",
+    //   "Call to Action: Target smarter with ABM—schedule a consultation today!",
+    //   "Deliver your message directly to your audience with our expertly crafted email marketing campaigns. From eye-catching designs to persuasive content, we ensure your emails drive engagement and results.",
+    //   "Call to Action: Make every email count—let’s create your next winning campaign!",
+    //   "Save time and effort by letting us secure high-quality appointments with potential clients. Our services help you connect directly with decision-makers who are ready to talk business.",
+    //   "Call to Action: Let us book your next big opportunity—start now!",
+    //   "Focus on leads that are ready to buy with our SQL services. We deliver highly qualified prospects, giving your sales team a head start in closing deals efficiently.",
+    //   "Call to Action: Empower your sales team with SQLs that deliver results—contact us today!",
+
+    // ]
   industryServing: [
     "Consulting",
     "Financial Services",

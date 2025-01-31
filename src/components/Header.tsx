@@ -36,7 +36,7 @@ export default function Header() {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 ml-auto">
+        <nav className="hidden md:flex items-center space-x ml-auto">
           {siteContent.navigation.links.map((link, index) => {
             if (index === 2) {
               // Services Dropdown
@@ -48,14 +48,14 @@ export default function Header() {
                   onMouseLeave={() => setIsServicesDropdownOpen(false)}
                 >
                   <button
-                    className="text-md text-brand-background dark:text-white flex items-center group-hover:text-brand-accent transition-colors px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    className="text-md text-brand-background dark:text-white flex items-center group-hover:text-brand-accent transition-colors px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-800"
                     onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                   >
                     {link.label} <ChevronDown size={18} className="ml-2" />
                   </button>
                   {isServicesDropdownOpen && (
                     <div 
-                      className="absolute mt-3 w-[350px] bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 grid grid-cols-2 gap-4 left-1/2 transform -translate-x-1/2"
+                      className=" absolute mt-0 w-[400px] bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 grid grid-cols-2 gap-6 left-1/2 transform -translate-x-1/2"
                     >
                       {siteContent.services.map((service, idx) => {
                         const Icon = servicesIcons[idx % servicesIcons.length];
@@ -84,14 +84,14 @@ export default function Header() {
                   onMouseLeave={() => setIsIndustryDropdownOpen(false)}
                 >
                   <button
-                    className="text-md text-brand-background dark:text-white flex items-center group-hover:text-brand-accent transition-colors px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    className="text-md text-brand-background dark:text-white flex items-center group-hover:text-brand-accent transition-colors px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-800"
                     onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
                   >
                     {link.label} <ChevronDown size={18} className="ml-2" />
                   </button>
                   {isIndustryDropdownOpen && (
                     <div 
-                      className="absolute mt-3 w-[350px] bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 grid grid-cols-2 gap-4 left-1/2 transform -translate-x-1/2"
+                      className="absolute mt-0 w-[400px] bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 grid grid-cols-2 gap-4 left-1/2 transform -translate-x-1/2"
                     >
                       {siteContent.industryServing.map((industry, idx) => {
                         const Icon = industryIcons[idx % industryIcons.length];
