@@ -30,13 +30,13 @@ export default function Header() {
         
         {/* Logo */}
         <button onClick={() => scrollToSection("home")} className="flex items-center">
-          <span className="text-5xl font-semibold text-brand-background dark:text-white hover:text-brand-accent transition-colors cursor-pointer">
+          <span className="text-6xl font-semibold text-brand-background dark:text-white hover:text-brand-accent transition-colors cursor-pointer">
             {siteContent.siteInfo.name}
           </span>
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x ml-auto">
+        <nav className="hidden md:flex items-center space-x ml-auto ">
           {siteContent.navigation.links.map((link, index) => {
             if (index === 2) {
               // Services Dropdown
@@ -116,7 +116,7 @@ export default function Header() {
               <button
                 key={index}
                 onClick={() => scrollToSection(link.href.replace("#", ""))}
-                className="text-md text-brand-background dark:text-white hover:text-brand-accent transition-colors px-4 py-2 border-b-2 border-transparent hover:border-brand-accent hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="text-md text-brand-background dark:text-white hover:text-brand-accent transition-colors px-7 py-4  border-b-2 border-transparent hover:border-brand-accent hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 {link.label}
               </button>
