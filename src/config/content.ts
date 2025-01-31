@@ -33,6 +33,7 @@ export const siteContent = {
       "Collaboration at the Core",
       "Simplicity Meets Results",
       // How can we help content
+      "How Can We Help",
       "No two businesses are the same, and neither are their needs",
       "Our approach is all about precision",
       "Simplifying the Sales Journey",
@@ -40,6 +41,7 @@ export const siteContent = {
       "Building Long-Term Partnerships",
       "Empowering You with Insights",
       // what sets us apart content
+      "What Sets Up Apart",
       "Tailored Strategies for Every Business",
       "Quality Over Quantity",
       "Data-Driven Excellence",

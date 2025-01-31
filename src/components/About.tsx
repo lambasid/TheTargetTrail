@@ -133,18 +133,18 @@ export default function About() {
             variants={itemVariants}
             className="text-[2.5rem] font-bold mt-13 mb-6 text-brand-primary"
           >
-            How We Can Help
+            {about.title[9]}
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="text-[1rem] text-brand-text mb-6 font-normal leading-relaxed"
           >
-            {about.paragraphs[13] || "Add a paragraph here."}
+            {about.paragraphs[12] || "Add a paragraph here."}
           </motion.p>
 
           {/* Additional Subheadings and Paragraphs */}
-          {about.title.slice(4, 9).map((title, index) => (
+          {about.title.slice(10, 16).map((title, index) => (
             <div key={index}>
               <motion.h2
                 variants={itemVariants}
@@ -156,10 +156,57 @@ export default function About() {
                 variants={itemVariants}
                 className="text-[1rem] text-brand-text mb-6 font-normal leading-relaxed"
               >
-                {about.paragraphs[index + 7] || "Add a paragraph here."}
+                {about.paragraphs[index+13] || "Add a paragraph here."}
               </motion.p>
+              
             </div>
+            
           ))}
+
+        </div>
+        <motion.p
+            variants={itemVariants}
+            className="text-[1rem] text-brand-text mb-6 font-normal leading-relaxed"
+          >
+            {about.paragraphs[19] || "Add a paragraph here."}
+          </motion.p>
+        
+        {/* What Sets Up apart Section */}
+        <div className="max-w-7xl mx-auto mt-24">
+          <motion.h1
+            variants={itemVariants}
+            className="text-[2.5rem] font-bold mt-13 mb-6 text-brand-primary"
+          >
+            {about.title[16]}
+          </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="text-[1rem] text-brand-text mb-6 font-normal leading-relaxed"
+          >
+            {about.paragraphs[20] || "Add a paragraph here."}
+          </motion.p>
+
+          {/* Additional Subheadings and Paragraphs */}
+          {about.title.slice(17, 23).map((title, index) => (
+            <div key={index}>
+              <motion.h2
+                variants={itemVariants}
+                className="text-[1.8rem] font-semibold mt-1 mb-6 text-brand-primary"
+              >
+                {title || "Add a title here."}
+              </motion.h2>
+              <motion.p
+                variants={itemVariants}
+                className="text-[1rem] text-brand-text mb-6 font-normal leading-relaxed"
+              >
+                {about.paragraphs[index+21] || "Add a paragraph here."}
+              </motion.p>
+              
+            </div>
+            
+          ))}
+
         </div>
       </div>
     </motion.section>
