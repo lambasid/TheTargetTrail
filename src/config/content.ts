@@ -88,17 +88,41 @@ export const siteContent = {
 
 
 
-      
+
     ],
     cta: "Learn More",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000",
   },
-  services: [
-    "Lead Generation",
-    "Data Enrichment",
-    "Marketing Automation",
-    "Analytics & Reporting",
-  ],
+  services: {
+    title: [
+      "Lead Nurturing",
+      "Demand Generation",
+      "Account-Based Marketing (ABM)",
+      "Email Marketing",
+      "Appointment Generation",
+      "Sales Qualifies Leads (SQL)",
+      "BANT Qualified Leads",
+      "Marketing Qualified Leads (MQL)",
+      "Event Registration",
+      "List Building",
+      "Data Append",
+      "Contact Discovery",
+
+    ],
+    paragraphs: [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ]
+  },
   industryServing: [
     "Consulting",
     "Financial Services",
