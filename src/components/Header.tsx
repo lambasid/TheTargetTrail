@@ -30,13 +30,13 @@ export default function Header() {
         
         {/* Logo */}
         <button onClick={() => scrollToSection("home")} className="flex items-center">
-          <span className="text-5xl font-semibold text-brand-background dark:text-white hover:text-brand-accent transition-colors cursor-pointer">
+          <span className="text-6xl font-semibold text-brand-background dark:text-white hover:text-brand-accent transition-colors cursor-pointer">
             {siteContent.siteInfo.name}
           </span>
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x ml-auto">
+        <nav className="hidden md:flex items-center space-x ml-auto ">
           {siteContent.navigation.links.map((link, index) => {
             if (index === 2) {
               // Services Dropdown
@@ -51,21 +51,21 @@ export default function Header() {
                     className="text-md text-brand-background dark:text-white flex items-center group-hover:text-brand-accent transition-colors px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-800"
                     onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                   >
-                    {link.label} <ChevronDown size={18} className="ml-2" />
+                    {link.label} <ChevronDown size={28} className="ml-2" />
                   </button>
                   {isServicesDropdownOpen && (
                     <div 
-                      className=" absolute mt-0 w-[400px] bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 grid grid-cols-2 gap-6 left-1/2 transform -translate-x-1/2"
+                      className="text-start absolute mt-0 w-[600px] bg-white dark:bg-gray-800 shadow-lg p-6 grid grid-cols-2 gap-6 left-1/2 transform -translate-x-16"
                     >
                       {siteContent.services.map((service, idx) => {
                         const Icon = servicesIcons[idx % servicesIcons.length];
                         return (
                           <button
                             key={idx}
-                            className="flex items-center space-x-3 text-sm py-2"
+                            className="flex place-items-center space-x-3 text-sm text-start py-2"
                             onClick={() => scrollToSection(service.toLowerCase().replace(/\s+/g, "-"))}
                           >
-                            <Icon className="text-orange-500 dark:text-[rgb(0,255,255)]" size={20} />
+                            <Icon className="text-orange-500 dark:text-[rgb(0,255,255)]" size={28} />
                             <span className="text-gray-900 dark:text-white">{service}</span>
                           </button>
                         );
@@ -87,21 +87,22 @@ export default function Header() {
                     className="text-md text-brand-background dark:text-white flex items-center group-hover:text-brand-accent transition-colors px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-800"
                     onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
                   >
-                    {link.label} <ChevronDown size={18} className="ml-2" />
+                    {link.label} <ChevronDown size={28} className="ml-2" />
                   </button>
                   {isIndustryDropdownOpen && (
                     <div 
-                      className="absolute mt-0 w-[400px] bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 grid grid-cols-2 gap-4 left-1/2 transform -translate-x-1/2"
+                      className="absolute items-start mt-0 w-[550px] bg-white dark:bg-gray-800 shadow-lg  p-6 grid grid-cols-2 gap-6 left-1/2 transform -translate-x-24"
                     >
                       {siteContent.industryServing.map((industry, idx) => {
                         const Icon = industryIcons[idx % industryIcons.length];
                         return (
                           <button
                             key={idx}
-                            className="flex items-center space-x-3 text-sm py-2"
+                            className="flex place-items-center space-x-3 text-sm text-start py-2"
+                            // className="flex place-items-end space-x-3 text-sm text-end py-2"
                             onClick={() => scrollToSection(industry.toLowerCase().replace(/\s+/g, "-"))}
                           >
-                            <Icon className="text-orange-500 dark:text-[#0ff]" size={20} />
+                            <Icon className="text-orange-500 dark:text-[#0ff]" size={28} />
                             <span className="text-gray-900 dark:text-white">{industry}</span>
                           </button>
                         );
@@ -115,7 +116,7 @@ export default function Header() {
               <button
                 key={index}
                 onClick={() => scrollToSection(link.href.replace("#", ""))}
-                className="text-md text-brand-background dark:text-white hover:text-brand-accent transition-colors px-4 py-2 border-b-2 border-transparent hover:border-brand-accent hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="text-md text-brand-background dark:text-white hover:text-brand-accent transition-colors px-7 py-4  border-b-2 border-transparent hover:border-brand-accent hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 {link.label}
               </button>
